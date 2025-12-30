@@ -616,12 +616,12 @@ jobs:
       - name: "[Setup] Checkout bookverse-infra for evidence library"
         uses: actions/checkout@v4
         with:
-          repository: 'yonatanp-jfrog/bookverse-infra'
+          repository: 'tomjfrog/bookverse-infra'
           ref: 'main'
           path: 'bookverse-infra'
 
       - name: "[Setup] JFrog CLI"
-        uses: EyalDelarea/setup-jfrog-cli@swampUpAppTrust
+        uses: jfrog/setup-jfrog-cli@v4
         id: jfrog-cli-auth
         with:
           oidc-provider-name: bookverse-inventory-github
