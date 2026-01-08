@@ -624,7 +624,7 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v4
         id: jfrog-cli-auth
         with:
-          version: 2.84.0
+          version: 2.88.0
           oidc-provider-name: bookverse-inventory-github
           oidc-audience: ${{ vars.JFROG_URL }}
         env:
