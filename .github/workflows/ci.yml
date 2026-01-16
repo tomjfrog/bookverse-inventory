@@ -486,7 +486,7 @@ jobs:
           echo "✅ Docker authentication successful"
 
       - name: "[Build] Docker Registry Authentication"
-        uses: docker/login-action@v3.6.0/
+        uses: docker/login-action@v3.6.0
         with:
           registry: ${{ vars.JFROG_URL }}
           username: ${{ steps.jfrog-cli-auth.outputs.oidc-user }}
