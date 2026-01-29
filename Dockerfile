@@ -1,11 +1,19 @@
 FROM python:3.11-slim
 
+# Set working directory
+WORKDIR /app
+
 ARG BUILD_TS
 LABEL org.opencontainers.image.created=$BUILD_TS
 RUN echo "$BUILD_TS" > /app/build-timestamp.txt
 
 # Set working directory
 WORKDIR /app
+
+# Add build timestamp to image for image uniquness
+ARG BUILD_TS
+LABEL org.opencontainers.image.created=$BUILD_TS
+RUN echo "$BUILD_TS" > /app/build-timestamp.txt
 
 # Install system dependencies
 ENV DEBIAN_FRONTEND=noninteractive
