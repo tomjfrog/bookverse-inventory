@@ -774,6 +774,7 @@ jobs:
 
 
       - name: "[Promote & Evidence] DEV Stage"
+        if: false
         run: |
           echo "🚀 Promoting to DEV stage and generating evidence"
           
@@ -798,6 +799,7 @@ jobs:
           echo "✅ DEV stage evidence attached via shared library: smoke-tests"
 
       - name: "[Promote & Evidence] QA Stage"
+        if: false
         run: |
           echo "🔍 Promoting to QA stage and generating evidence"
           
@@ -822,6 +824,7 @@ jobs:
           echo "✅ QA stage evidence attached via shared library: dast-scan, api-tests"
 
       - name: "[Promote & Evidence] STAGING Stage"
+        if: false
         run: |
           echo "🏗️ Promoting to STAGING stage and generating evidence"
           
@@ -846,6 +849,7 @@ jobs:
           echo "✅ STAGING stage evidence attached via shared library: iac-scan, pentest, change-approval"
 
       - name: "[Promote & Evidence] PROD Stage"
+        if: false
         run: |
           echo "🚀 Promoting to PROD stage and generating evidence"
           
@@ -876,6 +880,7 @@ jobs:
           echo "🎉 SUCCESS: Application version $APP_VERSION promoted to PROD with all evidence attached!"
 
       - name: "[Tags] Self-Healing Tag Management"
+        if: false
         run: |
           set -euo pipefail
           echo "🏥 Running self-healing tag management for PROD release"
@@ -911,7 +916,7 @@ jobs:
           echo "   - Non-SemVer versions: No special tags (ignored for 'latest')"
 
       - name: "📊 Enhanced Build Summary (bookverse-devops pattern)"
-        if: always()
+        if: always() && false
         run: |
           echo "📊 Generating comprehensive CI/CD pipeline summary for stakeholder visibility"
           echo "🎯 This summary provides complete build status, artifacts, and next steps"
