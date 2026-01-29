@@ -1,5 +1,9 @@
 FROM python:3.11-slim
 
+ARG BUILD_TS
+LABEL org.opencontainers.image.created=$BUILD_TS
+RUN echo "$BUILD_TS" > /app/build-timestamp.txt
+
 # Set working directory
 WORKDIR /app
 
