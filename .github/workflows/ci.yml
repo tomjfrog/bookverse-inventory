@@ -774,7 +774,7 @@ jobs:
 
 
       - name: "[Promote & Evidence] DEV Stage"
-        if: false
+        if: true
         run: |
           echo "🚀 Promoting to DEV stage and generating evidence"
           
