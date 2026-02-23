@@ -799,7 +799,7 @@ jobs:
           echo "✅ DEV stage evidence attached via shared library: smoke-tests"
 
       - name: "[Promote & Evidence] QA Stage"
-        if: false
+        if: true
         run: |
           echo "🔍 Promoting to QA stage and generating evidence"
           
@@ -824,7 +824,7 @@ jobs:
           echo "✅ QA stage evidence attached via shared library: dast-scan, api-tests"
 
       - name: "[Promote & Evidence] STAGING Stage"
-        if: false
+        if: true
         run: |
           echo "🏗️ Promoting to STAGING stage and generating evidence"
           
@@ -849,7 +849,7 @@ jobs:
           echo "✅ STAGING stage evidence attached via shared library: iac-scan, pentest, change-approval"
 
       - name: "[Promote & Evidence] PROD Stage"
-        if: false
+        if: true
         run: |
           echo "🚀 Promoting to PROD stage and generating evidence"
           
@@ -880,7 +880,7 @@ jobs:
           echo "🎉 SUCCESS: Application version $APP_VERSION promoted to PROD with all evidence attached!"
 
       - name: "[Tags] Self-Healing Tag Management"
-        if: false
+        if: true
         run: |
           set -euo pipefail
           echo "🏥 Running self-healing tag management for PROD release"
