@@ -531,6 +531,7 @@ jobs:
         env:
           EVIDENCE_PRIVATE_KEY: ${{ secrets.EVIDENCE_PRIVATE_KEY }}
           EVIDENCE_KEY_ALIAS: ${{ vars.EVIDENCE_KEY_ALIAS }}
+          PACKAGE_REPO_STAGE_SUFFIX: dev
         run: |
           echo "🛡️ Generating evidence for inventory image package using shared library"
           echo "📦 Target Package: inventory:$INVENTORY_VERSION"
