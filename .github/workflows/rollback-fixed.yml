@@ -80,7 +80,6 @@ jobs:
           version: 2.88.0
           oidc-provider-name: bookverse-inventory-github
           disable-job-summary: true
-          oidc-audience: ${{ vars.JFROG_URL }}
           disable-auto-build-publish: false
           disable-auto-evidence-collection: false
 
